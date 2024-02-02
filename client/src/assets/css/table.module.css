@@ -1,0 +1,235 @@
+/* PrimerTabele.css */
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  height: 15vh;
+}
+
+
+.left_list {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+
+
+.status {
+  border: 3px solid rgb(23, 70, 146);
+  border-radius: 0px 0px 15px 15px;
+  align-items: center;
+  height: 100px;
+  width: 300px;
+  position: relative;
+}
+
+
+.status h2 {
+  background-color: rgb(23, 70, 146);
+  width: 100%;
+  text-align: center;
+}
+
+.checkboxes {
+  display: flex;
+  height: 80%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.checkboxes > * {
+  width: auto;
+  margin: 0;
+}
+
+.pagebtn {
+  border-radius: 0 !important;
+}
+.checkboxes label {
+  margin-right: 5px;
+}
+
+.search_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+  position: relative;
+}
+
+.search_div > * {
+  height: 10px;
+  margin: 0;
+}
+
+.search {
+  padding: 10px 10px;
+}
+
+.clear_search {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(151, 40, 40);
+  color: #fff;
+  border: 0;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 0;
+  color: #fff;
+  background-color: rgb(36, 103, 155);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.right_list {
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+table {
+  height: auto;
+  border-spacing: 0;
+  width: 90%;
+}
+
+table td,table th{
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 13px;
+}
+thead tr {
+  background-color: rgb(229, 229, 229);
+  border: 21px solid black;
+}
+
+table, tbody,tr:nth-child(even){
+background-color: #f5f5f5;
+}
+th,
+td {
+  padding: 5px;
+  text-align: left;
+  border: 0.1px solid rgb(224, 223, 223);
+}
+
+/* Remove the border-bottom for the last child of th and td */
+
+.pagination {
+  display: flex;
+  margin: 20px 0px 20px 0px;
+  gap: 5px;
+  height: 35px;
+}
+
+.arrow {
+  width: 40px;
+  border: none;
+  background-color: rgb(68, 67, 67);
+  border-radius: 3px;
+}
+
+.btn3 {
+  width: 40px;
+  border: none;
+}
+
+@media (max-width: 1000px) {
+  table {
+    width: 100%; /* Make the table take up the full width */
+  }
+  
+
+  table, thead, tbody, th, td, tr {
+    display: block; /* Change the display to block for stacking cells vertically */
+  }
+  table{
+    margin-top: 20px;
+  }
+
+  th, td {
+    width: 100%; /* Make each cell take up the full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+  }
+
+  /* Hide table headers (th) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  td {
+    /* Optionally add some styling to space out the cells */
+    border: none;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 50%; /* Adjust as needed */
+    display: flex;
+    justify-content: start;
+    align-items: center;  
+    position: relative;
+  }
+   .box input{
+    background-color: red;
+  }
+  .box{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav {
+    flex-direction: column;
+    height: fit-content;
+    gap: 5px;
+  }
+  .left_list {
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+  }
+  .status {
+    height: 100px;
+  }
+}

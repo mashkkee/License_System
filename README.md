@@ -7,12 +7,11 @@ connected dashboard updates live when a record changes.
 ## Features
 
 - **JWT login.** Express issues a 1-day token and the React app checks it on load (`AuthContext`).
-- **Client and partner management.** Forms create clients (tax ID, contact details, environment,
+- **Client and partner management.** A protected admin page with forms to create clients (tax ID, contact details, environment,
   partner) and partners. New licences default to a 30-day expiry.
 - **Real-time sync with Socket.io.** Creating a client or partner pushes the change to every
   open dashboard straight away.
 - **Searchable licence table.** Filter by client, partner, status, issue date or expiry date.
-- **Monitor view** for an overview of all licences.
 - **MySQL schema** (`server/licenca.sql`) with `auth`, `client` and `parthner` tables and a client→partner relation.
 
 ## Tech
